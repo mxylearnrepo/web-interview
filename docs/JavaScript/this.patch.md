@@ -11,41 +11,7 @@
 
 - (箭头函数) 箭头函数中, this 指向是由其外层 (函数 or 全局) 作用域来决定的
 
-一句话总结: 除箭头函数是个特殊家伙外, 正常函数按照 new => 显式 => 隐式 => 默认 的顺序逐条规则降级判定
+一句话总结: 除箭头函数是个特殊家伙外 (可以看做最高优先级), 正常函数按照 new => 显式 => 隐式 => 默认 的顺序逐条规则降级判定
 
 # 实战例题
-1. 全局环境中的 this
-```js
-function f1() {
-	console.log(this)
-}
-function f2() {
-	'use strict'
-	console.log(this)
-}
-f1() // window
-f2() // undefined
-```
-这个很简单, 根据第一条铁律可以立即得到答案, 但是如果变种成:
-```js
-const foo = {
-	bar:10,
-	fn:function() {
-		console.log(this)
-		console.log(this.bar)
-	}
-}
-var fn1 = foo.fn
-fn1() // window & undefined
-```
-这里的 this 仍然指向 window , 因为 fn1 的调用, 依然只符合第一条铁律
-而 window.bar 没有被定义过, 所以是 undefined
-上面这个题目再一次变种:
-```js
-// foo 还是上面那个 foo
-foo.fn() // {bar: 10, fn: f} & 10
-```
-这个时候, fn 的调用有了一个**执行上下文对象**, 即 foo 对象, 符合第四铁律
-
-
-2. 上下文对象调用中的 this
+侯策 <前端开发核心知识进阶> page.03

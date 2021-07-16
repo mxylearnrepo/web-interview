@@ -17,10 +17,10 @@
 
 我们使用 Babel 时会添加 @babel/plugin-transform-runtime 这样的设施来提供 Babel 所需的 helpers 函数, 然而:
   * plugin-transform-runtime 会根据 sourceType 选项来选择注入的 helper 函数是 ESM 或者 CJS, 而 sourceType 的默认值是 module, 那么就会注入成 import
-  * 如果一个 module 里面有了 import 这样的代码, Webpack 会判定它是 ESM, 这时候如果它里面又有 module.exports 这样的导出, 或者 require 这样的导入, Webpack 不会为它提供 CJS 的处理方式, 然后就会报错
+  * 如果一个 module 里面有了 import 这样的代码, Webpack 会判定它是 ESM, 这时候如果它里面又有 module.exports 这样的导出, 或者 require 这样的导入, Webpack 不会为它提供 CJS 的处理方式(即不会管它, 留在打包后的代码里面了就), 然后就会报错
 
 Babel 提供了一个办法来解决这个问题: sourceType：unambiguous
-如果 sourceType 选项是 unambiguous 的话, Bable 会根据文件上下文 (比如是否含有 import/export 之类的黑魔法) 来决定用哪种方式注入函数代码:
+如果 sourceType 选项是 unambiguous 的话, Babel 会根据文件上下文 (比如是否含有 import/export 之类的黑魔法) 来决定用哪种方式注入函数代码:
 ```js
 // babale.config.js
 module.exports = {

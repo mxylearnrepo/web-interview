@@ -2,22 +2,12 @@
 [查看](./array_api.md)
 
 ## 增强循环
-for in
-```js
-var arr = [1, 2, 4, 5, 7]
-for (var index in arr) { // index 是一个字符串 (非数字)
-  console.log(myArray[index])
-}
-for (var key in myObject) {
-  if（myObject.hasOwnProperty(key)){
-　  console.log(key)
-  }
-}
-```
-使用 for in 遍历得到的顺序是随机的, 因为它本来就是为遍历对象而设计
-所以不要使用它遍历数组
+**for in**
+for in 遍历的是对象的 keys, 而对于数组就是下标
+但是使用 for in 遍历得到的顺序是随机的, 因为它本来就是为遍历对象而设计
+所以一般不要使用它遍历数组
 
-for of
+**for of**
 ```js
 var myArray = [1, 2, 4, 5, 6, 7]
 myArray.name = "数组"

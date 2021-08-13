@@ -1,5 +1,5 @@
-# Router
-## Vue Router 的基本使用
+# 说一下 router?
+## 基本使用
 ```jsx
 // router.js 导出 VueRouter 的一个实例
 import Vue from 'vue'
@@ -175,7 +175,7 @@ server {
 <br>
 
 
-# history 模式实现原理
+## 实现原理
 首先通过 history.pushState 往浏览器地址栏放入一个新 url, 这时不会触发刷新;
 监听 popState 事件, 根据当前地址栏路由地址找到对应 view 组件渲染到 router-view 里.
 
@@ -282,8 +282,7 @@ export default class VueRouter {
 }
 ```
 
-# hash 模式实现原理
-> 模拟 VueRouter 的 hash 模式的实现，实现思路和 History 模式类似，把 URL 中的 # 后面的内容作为路由的地址，可以通过 hashchange 事件监听路由地址的变化
+## hash 模式实现
 ```js
 let _Vue = null
 export default class VueRouter {

@@ -1,4 +1,5 @@
 # 响应式原理
+**双重观察者模式**
 MVVM: Model-View-ViewModel
 数据与视图之间没有直接的关系, vm层负责它们的交互.
 vm就是一个同步 view 和 model 的 对象, 双向绑定装置.
@@ -6,10 +7,11 @@ vm会 watch 数据变化, 然后更新dom.
 参考: 
   https://www.jianshu.com/p/26e24ce84c4b
   https://www.jianshu.com/p/8cde476238f0
+  https://juejin.cn/post/6844904099310206989
 
 观察者模式与发布订阅模式的区别是: 观察者模式没有事件中心, 观察者需要知道订阅者的存在
 
-模拟 Vue 响应式实现 (观察者模式):
+模拟 Vue 响应式实现 (**双重**观察者模式):
 Vue -> Observer 劫持数据 -> Dep 发布者 -> Watcher 观察者    
 Vue -> Compiler 解析指令 -> Watcher 观察者 
 

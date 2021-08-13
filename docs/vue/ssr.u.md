@@ -1,12 +1,4 @@
-# Vue 的服务端渲染
-Vue 的 ssr 主要是针对 使用 vue 开发 spa 的 ssr.
-主要解决了:
-  - 提升 SPA 的首屏加载速度
-  - 优化 seo
-在前后端还没分离的时代, JAVA, PHP 这些老牌编程语言都是使用服务器渲染页面, 多年的沉淀已经发展出了成熟的 ssr 方案.
-但是后来前后端分家了, 前端进入了 vue, react 时代, 而老牌语言额 ssr 只能在它们自己生态下做, 所以就需要新的 ssr 方案.
-
-一个简单的案例:
+# 从一个简单的案例开始
 ```js
 // server app.js
 import Koa2 from 'koa'
@@ -75,7 +67,7 @@ app.use(async function (ctx) {
 app.listen(8888) // 开始监听
 ```
 
-> 集成 vue-route:
+## 集成 vue-router
 ```js
 // route.js
 import Vue from 'vue'
@@ -110,8 +102,7 @@ export const routerReady = (router) => {
   })
 }
 ```
-
-> 同构: 
+## 实现同构 
 为什么需要同构?
 Vue 的代码在服务端执行了也 输出成 html 直接返回给客户端了, 为什么在客户端还要再执行一遍?
 因为服务器渲染有它的局限性: 例如在 template 上绑定了一个事件, 这段代码必须在浏览器环境中也能执行;
@@ -132,7 +123,7 @@ new Vue({
 ```
 利用 webpack 从这个入口进入打包出一份客户端 bundle.js 代码, 用 script 标签引入写在服务器 app.js 的 {{html}} 后面
 
-> 请求数据
+## 请求数据
 数据(接口)放在一个远程服务器上,
 服务端可以在组件中添加一个 asyncData 方法:
 ```vue
@@ -153,7 +144,7 @@ export default {
 ```
 客户端是用不到这个 asyncData 方法的, 自己该怎么请求就怎么请求.
 
-> 集成 vuex:
+## 集成 vuex
 vuex 可以很好地帮我们管理数据集 (非必须)
 ``` js
 // store.js
@@ -202,7 +193,7 @@ if (window.context && window.context.state) {
 }
 ```
 
-> 设置 meta:
+## 设置 meta
 可以直接写死, 但要想让不同的 view 设置不同的 meta, 
 也可以使用 vue-meta 更灵活更优雅地分别在服务端和客户端设置 meta, 就像:
 ```js
@@ -221,7 +212,7 @@ export default {
 [参考](https://segmentfault.com/a/1190000012849210)
 
 
-> vue-server-renderer 原理:
+## vue-server-renderer 原理
 首先它里面是一个工场函数, 可用来得到一个 Renderer 实例
 Renderer 实例可以用来完成一个 从 Vue 实例 -> HTML 字符串的转化
 

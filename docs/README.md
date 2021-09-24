@@ -260,10 +260,48 @@ PS: 仓库每周一更，想要及时收到推送，交流想法的同学，可�
 - [面试官：说说对Fiber架构的理解？解决了什么问题？](https://github.com/febobo/web-interview/issues/209)
 - [面试官：说说React Jsx转换成真实DOM过程？](https://github.com/febobo/web-interview/issues/206)
 - [面试官：说说 React 性能优化的手段有哪些？ ](https://github.com/febobo/web-interview/issues/211)
+- [面试官：说说你在React项目是如何捕获错误的？](https://github.com/febobo/web-interview/issues/216)
+- [面试官：说说React服务端渲染怎么做？原理是什么？](https://github.com/febobo/web-interview/issues/217)
+- [面试官：说说你在使用React 过程中遇到的常见问题？如何解决?](https://github.com/febobo/web-interview/issues/218)
+
+<h3 style="text-align: center">版本控制系列</h3>
+
+- [面试官：说说你对版本管理的理解？常用的版本管理工具有哪些？](https://github.com/febobo/web-interview/issues/219)
+- [面试官：说说你对Git的理解？](https://github.com/febobo/web-interview/issues/220)
+- [面试官：说说Git中 fork, clone,branch这三个概念，有什么区别?](https://github.com/febobo/web-interview/issues/221)
+- [面试官：说说Git常用的命令有哪些？](https://github.com/febobo/web-interview/issues/222)
+- [面试官：说说Git 中 HEAD、工作树和索引之间的区别？](https://github.com/febobo/web-interview/issues/223)
+- [面试官：说说对git pull 和 git fetch 的理解？有什么区别？](https://github.com/febobo/web-interview/issues/224)
+- [面试官：说说你对git stash 的理解？应用场景？](https://github.com/febobo/web-interview/issues/227)
+- [面试官：说说你对git rebase 和 git merge的理解？区别？](https://github.com/febobo/web-interview/issues/228)
+- [面试官：说说 git 发生冲突的场景？如何解决？](https://github.com/febobo/web-interview/issues/229)
+- [面试官：说说你对git reset 和 git revert 的理解？区别？](https://github.com/febobo/web-interview/issues/230)
+
+<h3 style="text-align: center">操作系统系列</h3>
+
+- [面试官：说说你对操作系统的理解？核心概念有哪些？](https://github.com/febobo/web-interview/issues/231)
+- [面试官：说说什么是进程？什么是线程？区别？](https://github.com/febobo/web-interview/issues/232)
+- [面试官：说说 linux系统下 文件操作常用的命令有哪些？](https://github.com/febobo/web-interview/issues/233)
+- [面试官：说说 linux 系统下 文本编辑常用的命令有哪些？](https://github.com/febobo/web-interview/issues/234)
+- [面试官：说说你对 linux 用户管理的理解？相关的命令有哪些？](https://github.com/febobo/web-interview/issues/235)
+- [面试官：说说你对输入输出重定向和管道的理解？应用场景？](https://github.com/febobo/web-interview/issues/236)
+- [面试官：说说你对 shell 的理解？常见的命令？](https://github.com/febobo/web-interview/issues/237)
+
+<h3 style="text-align: center">typescript系列</h3>
+
+- [面试官：说说你对 typescript 的理解？与 javascript 的区别？](https://github.com/febobo/web-interview/issues/245)
+- [面试官：说说 typescript 的数据类型有哪些？](https://github.com/febobo/web-interview/issues/246)
+- [面试官：说说你对 TypeScript 中枚举类型的理解？应用场景？](https://github.com/febobo/web-interview/issues/247)
+- [面试官：说说你对 TypeScript 中接口的理解？应用场景？](https://github.com/febobo/web-interview/issues/248)
+- [面试官：说说你对 TypeScript 中类的理解？应用场景？](https://github.com/febobo/web-interview/issues/249)
+- [面试官：说说你对 TypeScript 中函数的理解？与 JavaScript 函数的区别？](https://github.com/febobo/web-interview/issues/255)
+- [面试官：说说你对 TypeScript 中泛型的理解？应用场景？](https://github.com/febobo/web-interview/issues/250)
+- [面试官：说说你对 TypeScript 中高级类型的理解？有哪些？](https://github.com/febobo/web-interview/issues/251)
+- [面试官：说说你对 TypeScript 装饰器的理解？应用场景？](https://github.com/febobo/web-interview/issues/252)
+- [面试官：说说对 TypeScript 中命名空间与模块的理解？区别？](https://github.com/febobo/web-interview/issues/253)
+- [面试官：说说如何在React项目中应用TypeScript？](https://github.com/febobo/web-interview/issues/255)
 ## 👧 更多系列
 
-### 面试官React系列/精选33道
-筹备中..
 ### 面试官手写系列/精选33道
 筹备中..
 ### 面试官算法系列/精选33道

@@ -1,9 +1,9 @@
 # 组件
 组件 = 
   响应式数据 (Object.defineproperty, Proxy) + 
-  render 函数 (产出虚拟 DOM) + 
-  模板编译 (产出 render 函数) + 
-  逻辑复用 (mixin, composive api, hooks, 高阶函数)
+  模板编译 -> 产出 render 函数 + 
+  render 函数 -> 产出虚拟 DOM + 
+  逻辑复用 (mixin, 高阶函数, composive api, hooks)
 
 ## 组件的分类
 函数式组件 与 有状态组件 的区别如下：

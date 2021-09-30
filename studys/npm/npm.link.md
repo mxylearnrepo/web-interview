@@ -8,12 +8,15 @@ packageA 现在更新了, 需要在 projectA 中验证
 
 先在 packageA 的目录下执行 npm link, packageA 目录就被链接到全局
 
-然后在 projectA 中执行 npm lin npm-packageA 命令, 它就会去全局软链接
+然后在 projectA 中执行 npm link npm-packageA 命令, 它就会去全局软链接
 /usr/local/lib/node_modules/ 这个路径下去找有没有 packageA 这个包
 
-如果有就在 projectA 的 node_moduels 中建立一个 pacakgeA 的软链接
+如果有就在 projectA 的 node_moduels 中建立一个 packageA 的软链接
+
+然后就可以在 projectA 的代码里面 require('packageA') 了
 
 不要忘了调试结束后执行 npm unlink 取消关联
+
 
 ## 进一步
 npm link 有两个能力:

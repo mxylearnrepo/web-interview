@@ -1,4 +1,3 @@
-
 # axios 值得借鉴的地方
 ## 拦截器设计
 把所有功能都在一个 get 函数里统一处理, 会导致 get 函数臃肿, 不易扩展
@@ -8,6 +7,7 @@
 
 拦截器的本质就是一个实现特定功能的函数 (好像所有东西的本质都是一个函数)
 拦截器的执行过程是: 任务注册 -> 任务编排 -> 任务调动 三个阶段
+拦截器是不是等同于中间件?
 
 ## 适配器设计
 对于浏览器, 可以通过 XMLHTTPRequest 或 fetch api 来发送 http 请求
@@ -218,5 +218,6 @@ axios 默认配置了默认 xsrfCookieName 和 xsrfHeaderName, 实际开发中�
 
 
 # 更多
+[Axios 源码分析](../../docs/vue/axiosCode.md)
 https://www.axios-http.cn/docs/intro
 https://lxchuan12.gitee.io/axios/

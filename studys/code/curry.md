@@ -13,5 +13,6 @@ add(1)(2)(3)
 ```
 实现 curry:
 ```js
-const curry = (fn, ...args) => args.length > fn.length ? fn(...args) : (..._args) => curry(fn, ...args, ..._args)
+const curry = (fn, ...args) => 
+  args.length >= fn.length ? fn(...args) : (..._args) => curry(fn, ...args, ..._args)
 ```

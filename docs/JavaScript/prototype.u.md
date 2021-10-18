@@ -48,30 +48,11 @@ Function.__proto__ === doSomething.__proto__
 感觉 Function 就是一个带孝子啊
 而 Object 像一个宽容的造物者
 
+而所谓的 原型链 就是对象的 __proto__.__proto__.__proto__... 组成的链
+任何一个对象 (除了 null) 都有一个 __proto__ 属性
 
 ## 以原型链实现的继承
-```js
-function Animal(name) {
-  this.name = name
-  this.eat = food => console.log(this.name + 'is eating' + food)
-}
-Animal.prototype.sleep = function () {
-  console.log(this.name + 'is sleeping')
-}
-// Cat 继承 Animal
-// 核心: 将父类的实例作为子类的原型
-function Cat(){}
-Cat.prototype = new Animal()
-Cat.prototype.name = 'cat'
-// 测试
-var cat = new Cat()
-console.log(cat.name) // cat
-console.log(cat.eat('fish')) // cat is eating fish
-console.log(cat.sleep()) // cat is sleeping
-console.log(cat instanceof Animal);//true 
-console.log(cat instanceof Cat) //true
-```
-[更多继承实现方式](https://www.cnblogs.com/humin/p/4556820.html)
+继承的说法不准确, 委托应该更准确些
 
 ## 创建对象的不同方式
 [JavaScript：继承和原型链（译）](https://justjavac.com/2015/12/09/inheritance-and-the-prototype-chain.html)

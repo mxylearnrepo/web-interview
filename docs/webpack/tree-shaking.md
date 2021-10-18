@@ -1,3 +1,14 @@
+# Tree Shaking 的本质
+Tree-Shaking 的本质是消除**没用到的js代码**
+
+无用代码的消除在传统语言编译中, 编译器可以判断某些代码根本不影响输出, 然后消除它们
+这种技术叫做 DCE (dead code elimination)
+
+Tree-Shaking 其实就是 DCE 的一种实现
+只不过 js 代码 (从 Nodejs 而来) 有一套独特的模块加载体系, 而 Tree-Shaking 的实现也就包含两个部分:
+  1. 同模块 (同文件) 的无用代码消除, 基本就是传统的 DCE, 由 uglyfy 实现
+  2. 跨模块的无用代码消除, 基于 ESM 模块规范, 由构建工具 (Webpack) 负责标记, 并配合插件 (TerserPlugin) 进行消除
+
 # Tree Shaking 为什么要依赖 ESM 规范？
 tree-shaking 的大前提是 esm 的静态性:
   - import 导入的模块名只能是字符串常量
@@ -143,3 +154,4 @@ CSS 也能摇, 要找出没用到的选择器样式, 删除掉, 其实原理和�
   - 将所有的 CSS 文件经由 PostCss 过一遍拿到 AST 数据结构
   - 遍历 AST 找出无用的 CSS 选择器样式代码, 删除之
   - 重新组合成 CSS 文件字符串交还给 Webpack
+

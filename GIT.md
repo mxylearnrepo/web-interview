@@ -1,0 +1,2 @@
+[fork了别人的项目之后如何保持同步更新-实操一遍](https://blog.csdn.net/wuzhongqiang/article/details/103227170)
+[【突发】解决remote: Support for password authentication was removed on August 13, 2021. Please use a perso](https://blog.csdn.net/yjw123456/article/details/119696726)

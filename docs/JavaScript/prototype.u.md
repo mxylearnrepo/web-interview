@@ -30,6 +30,7 @@ __proto__ 则指向任何一个对象 (函数对象或普通对象) 的构造函
 Object 就像一个创世之神, 给它创造的每一个对象里放一个指向自己的 prototype 的 __proto__ 属性
 但是 Object 是允许创造出的对象改变 __proto__ 属性值的, 因为不管怎么变, 都得有一个对象承担这个值, 最终都会回到自己
 
+# Function
 Function 是唯一的一个特殊的构造函数
 ```js
 Function.__proto__ === Function.prototype // 内置匿名函数 `anonymous`
@@ -51,8 +52,20 @@ Function.__proto__ === doSomething.__proto__
 而所谓的 原型链 就是对象的 __proto__.__proto__.__proto__... 组成的链
 任何一个对象 (除了 null) 都有一个 __proto__ 属性
 
+但是 es6 中, Function 这家伙又创造了一个怪异的东西, 箭头函数
+
+## 箭头函数
+箭头函数也是由 Function 创造的, 但是特别的是, 箭头函数没有 prototype 属性
+箭头函数也压根不是一个构造函数, 因此如果使用 new 箭头函数会报错
+但是它又属于 Function 的实例, 所以其 __proto__ 指向 Function.prototype (伪爸爸)
+箭头函数的出现主要是为了独立的 this 绑定, 但是确实非常特殊甚至有些怪异
+
+## length
+Function 还给它创造的实例偷偷加了一个 length 属性, 代表参数的个数, 并且这个属性是只读的
+
 ## 以原型链实现的继承
 继承的说法不准确, 委托应该更准确些
+[如何优雅的实现继承](../../studys/code/inherit.md)
 
 ## 创建对象的不同方式
 [JavaScript：继承和原型链（译）](https://justjavac.com/2015/12/09/inheritance-and-the-prototype-chain.html)

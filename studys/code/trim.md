@@ -1,1 +1,0 @@
-[JavaScript trim函数大赏](https://www.cnblogs.com/rubylouvre/archive/2009/09/18/1568794.html)

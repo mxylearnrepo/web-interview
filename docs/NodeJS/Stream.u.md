@@ -35,5 +35,6 @@ readableSrc.pipe(writableDest)
 每次流入一个数据块给 response (writable) 对象, 意味着再也不用在内存中缓存整个对象了
 
 
-# 关于 Nodejs Stream 最好的文章
+# 文章
+https://www.barretlee.com/blog/2017/06/06/dive-to-nodejs-at-stream-module/
 https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/

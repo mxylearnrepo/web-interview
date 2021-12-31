@@ -39,10 +39,9 @@ pipe 把传入的 fns 从前往后套娃执行
 ```js
 const pipe = (...fns) => input => fns.reduce((pre, cur) => cur(pre), input)
 ```
-而 compose 是 [pipe](./reduce.md) 的一个反向
+而 compose 是 pipe 的一个反向
 ```js
 const compose = (...fns) => fns.reduce((pre, cur) => (...args) => pre(cur(...args)))
-
 ```
 上头 pipe 和 compose 的实现没有做这俩个判断
 ```js
